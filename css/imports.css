@@ -1,0 +1,41 @@
+body > header > h1 {
+	height: 100%;
+	background: transparent url(/img/hs-digilehti.png) center 2px no-repeat;
+	padding-left: 15px;
+	padding-top: 10px;
+	float: left;
+}
+
+/*@media all and (min-width: 480px) and (orientation: portrait) {
+	body header {
+		font-size: 12pt;
+	}
+	body article header {
+		background-color: blue;
+	}
+	body article section {
+		background-color: blue;
+	}
+}
+@media all and (min-width: 800px) and (orientation: landscape) {
+	body header {
+		font-size: 14pt;
+	}
+	body article header {
+		background-color: green;
+	}
+	body article section {
+		background-color: green;
+	}
+}
+@media all and (min-width: 1280px) {
+	body header {
+		font-size: 20pt;
+	}
+	body article header {
+		background-color: red;
+	}
+	body article section {
+		background-color: red;
+	}	
+}/*
