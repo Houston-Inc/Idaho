@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Helsingin Sanomat - Digilehti
+		</title>
+		<style>
+			@media all and (min-width: 480px) and (orientation: portrait) {
+				body header {
+					font-size: 12pt;
+				}
+				body article header {
+					background-color: blue;
+				}
+				body article section {
+					background-color: blue;
+				}
+			}
+			@media all and (min-width: 800px) and (orientation: landscape) {
+				body header {
+					font-size: 14pt;
+				}
+				body article header {
+					background-color: green;
+				}
+				body article section {
+					background-color: green;
+				}
+			}
+			@media all and (min-width: 1280px) {
+				body header {
+					font-size: 20pt;
+				}
+				body article header {
+					background-color: red;
+				}
+				body article section {
+					background-color: red;
+				}	
+			}
+		</style>
+		<script src="js/jquery.min.js"></script>
+		<script src="artikkelit.js"></script>
+		<script>
+			$(document).ready(function() {
+				var article = ARTIKKELIT["KOTIMAA"][1];
+				$("article header").html(article["otsikko1"]);
+				$("article section[role=main]").html(article["sisalto"]);
+			});
+			
+			/*$.each(ARTIKKELIT["KOTIMAA"], function(index, article) {
+				console.log(index + " "+ article["otsikko1"]);
+			});*/
+			
+		</script>
+	</head>
+	<body>
+		<header>HS.fi</header>
+		<hr />
+		<article>
+			<header></header>
+			<img src="paavo.jpg" />
+			<section role="main">
+				
+			</section>
+		</article>
+	</body>
+</html>
