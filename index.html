@@ -16,13 +16,12 @@
     <link rel="stylesheet" href="/css/boilerplate.css" />
     <link rel="stylesheet" href="/css/imports.css" />
     <script src="/lib/modernizr-2.0.6.min.js"></script>
-    <script type="text/html" id="article">
+    <script type="text/template" id="articleTemplate">
     <article>
-    <header> {header} </header>
-    <section id="ingressi"> {ingress} <section>
-    {articleText}
+    <header>  Otsikko </header>
+    <section id="ingressi"> Ingressi  <section>
+    Artikkelin teksti
     </article>
-   
     </script>
 </head>
 <body>
@@ -37,10 +36,22 @@
         </footer>
     </div>
     <!-- end container -->
-    <script defer src="/lib/jquery.min.js"></script>
+    <script  src="/lib/jquery.min.js"></script>
     <script defer src="/lib/underscore.js"></script>
     <script defer src="/lib/backbone.js"></script>
     <script defer src="/lib/routers/router.js"></script>
+    <script defer src="lib/views/articleView.js"></script>
+    <script defer src="lib/models/article.js"></script>
+    <script defer src="lib/routers/router.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var article = new ArticleView();
+
+        });
+
+    </script>
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 			chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <!--[if lt IE 7 ]>
