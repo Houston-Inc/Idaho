@@ -16,14 +16,6 @@
     <link rel="stylesheet" href="/css/boilerplate.css" />
     <link rel="stylesheet" href="/css/imports.css" />
     <script src="/lib/modernizr-2.0.6.min.js"></script>
-    <script type="text/html" id="article">
-    <article>
-    <header> {header} </header>
-    <section id="ingressi"> {ingress} <section>
-    {articleText}
-    </article>
-   
-    </script>
 </head>
 <body>
     <div id="container">
@@ -34,13 +26,49 @@
         <div id="main" role="main">
         </div>
         <footer>
+        	<div id="forward" style="float: right; padding-right: 10px; cursor: pointer;">
+        		FWD
+        	</div>
+        	<div id="rewind" style="float: left; padding-left: 10px; cursor: pointer;">
+        		RWD
+        	</div>
         </footer>
     </div>
     <!-- end container -->
     <script defer src="/lib/jquery.min.js"></script>
     <script defer src="/lib/underscore.js"></script>
     <script defer src="/lib/backbone.js"></script>
+    <script defer src="/artikkelit.js"></script>
+    <script defer src="/lib/models/articleModel.js"></script>
+    <script defer src="/lib/views/articleView.js"></script>
     <script defer src="/lib/routers/router.js"></script>
+    
+    <script type="text/html" id="article">
+    	<nav id="article-navigation" role="navigation">
+    		<div>
+    			<span><%= article.getCategory() %></span>
+    		</div>
+    	</nav>
+    	<nav class="category-article-list">
+			<ul>
+				<li>KAIKKI UUTISET - <%= article.getCategory().toUpperCase() %></li>
+				<% _.each(article.categoryArticles, function(categoryArticle) { %>
+					<li class="category-article-link<%= categoryArticle.active %>" data-category-name="<%= article.getCategory() %>" data-article-id="<%= categoryArticle.articleId %>"><%= categoryArticle.title %></li>	
+				<% }); %>	
+			</ul>
+		</nav>
+    	<article>
+    		<header><%= article.getHeader() %></header>
+    		<hr />
+    		<cite>Etunimi Sukunimi / HS</cite> <cite>Etunimi Sukunimi / HS</cite>
+    		<section id="viewport">
+    			<%= article.getImage() %>
+	    		<section class="article-ingress"><%= article.getIngress() %><section>
+	    		<%= article.getContent() %>	
+    		</section>
+    	</article>
+    </script>
+    
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 			chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <!--[if lt IE 7 ]>

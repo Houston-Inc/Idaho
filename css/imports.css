@@ -1,6 +1,23 @@
 body {
 	width: 100%;
+	font-family: "Georgia","Cambria","Times New Roman", Times, serif;
 }
+
+hr {
+	margin: 5px 10px 3px 10px;
+}
+
+cite {
+	padding-left: 10px;
+	color: #646464;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+}
+
 #container {
 	width: 100%;
 }
@@ -16,6 +33,94 @@ header[role=banner] > h1 {
 	width: 222px;
 	background: transparent url(/img/hs-digilehti.png) no-repeat center 2px;
 	float: left;
+}
+
+section#viewport {
+	column-count: 3;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 10px;
+	height: 277px;
+	overflow: hidden;
+}
+
+#article-navigation {
+	margin: 10px;
+	height: 30px;
+	background-color: #72AED9 !important;
+}
+
+#article-navigation div {
+	font-size: 16px;
+	color: white;
+	background-color: #5B9ED1;
+	line-height: 30px;
+	height: 30px;
+	padding: 0px 10px;
+	float:left;
+	clear: both;
+	border-right: 1px solid white;
+}
+
+#article-navigation span {
+	background: transparent url(/img/headerarrow_article.png) right center no-repeat;
+	padding-right: 25px;	
+}
+
+#article-navigation div:hover {
+	background-color: #4280B1 !important;
+}
+
+.category-article-list {
+	position: absolute;
+	top: 90px;
+	left: 10px;
+	display: none;
+	padding: 10px;
+	height: 50%;
+	max-width: 300px;
+	width: 50%;
+	background-color: white;
+	border-right: 5px solid #ccc;
+	border-left: 5px solid #ccc;
+	overflow: scroll;	
+}
+
+.category-article-list ul {
+	margin: 0px;
+}
+
+.category-article-list li {
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.category-article-link {
+	cursor: pointer;
+}
+
+.category-article-link:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+.category-article-link.active {
+	cursor: default;
+	font-style: italic;
+}
+
+.category-article-link.active:hover {
+	cursor: default;
+	background-color: transparent;
+}
+
+article header {
+	font-size: 28px;
+	line-height: 28px;
+	padding: 5px 10px;
+	font-weight: normal;
 }
 
 footer {
