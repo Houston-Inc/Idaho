@@ -1,0 +1,10 @@
+section#viewport {
+	column-count: 4;
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 10px;
+	height: 277px;
+	overflow: hidden;
+}

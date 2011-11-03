@@ -1,0 +1,13 @@
+section#viewport {
+	column-count: 1;
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	margin: 10px;
+	width: 100%;
+	font-size: 28px;
+	line-height: 36px;
+}
+
+footer {
+	display: none;
+}
